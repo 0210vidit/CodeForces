@@ -1,19 +1,21 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
+
 int main()
 {
-
-  long n;
-  cin >> n;
-  long res;
-  if (n % 2 == 0)
+  int count = 0;
+  int t;
+  cin >> t;
+  string s;
+  cin >> s;
+  for (int i = 0; i < s.length() - 1; i++)
   {
-    res = n / 2;
+    if (s[i] == s[i + 1])
+    {
+      count++;
+    }
   }
-  else
-  {
-    res = -(n + 1) / 2;
-  }
-  cout << res << endl;
+  cout << count << endl;
 }
